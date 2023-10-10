@@ -12,7 +12,7 @@ This Flutter project is an e-commerce application that displays a list of produc
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone <repository_url>
+   git clone [https://github.com/Thalinda/Productswireapps] (https://github.com/Thalinda/Productswireapps)
    ```
 
 2. Change directory to the project folder:
