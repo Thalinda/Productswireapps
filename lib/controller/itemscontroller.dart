@@ -27,6 +27,11 @@ class CarController extends ChangeNotifier {
     notifyListeners();
   }
 
+  void removeFromCart(CartItem cartItem) {
+    _items.remove(cartItem);
+    notifyListeners();
+  }
+
   Future<void> fetchData() async {
     try {
       print("object");

@@ -19,9 +19,23 @@ class CartScreen extends StatelessWidget {
               itemCount: cart.items.length,
               itemBuilder: (context, index) {
                 final item = cart.items[index];
-                return ListTile(
-                  title: Text(item.product.name),
-                  subtitle: Text('Quantity: ${item.quantity}'),
+                return Dismissible(
+                  key: UniqueKey(), // Unique key for each item
+                  onDismissed: (direction) {
+                    // Handle item removal here
+                    cart.removeFromCart(
+                        item); // Assuming you have a method for removing items in your controller
+                  },
+                  background: Container(
+                    color: Colors.red,
+                    child: Icon(Icons.delete, color: Colors.white),
+                    alignment: Alignment.centerRight,
+                    padding: EdgeInsets.only(right: 20.0),
+                  ),
+                  child: ListTile(
+                    title: Text(item.product.name),
+                    subtitle: Text('Quantity: ${item.quantity}'),
+                  ),
                 );
               },
             ),

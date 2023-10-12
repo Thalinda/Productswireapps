@@ -112,6 +112,11 @@ class _ProductListScreenState extends State<ProductListScreen> {
                         icon: Icon(Icons.add_shopping_cart),
                         onPressed: () {
                           cart.addToCart(product);
+                          ScaffoldMessenger.of(context)
+                              .showSnackBar(const SnackBar(
+                            content: Text("New product added to cart"),
+                            duration: Duration(seconds: 5),
+                          ));
                         },
                       );
                     },
