@@ -49,6 +49,7 @@ The application offers the following features as per the provided task:
 - Click on a product to view its details.
 - Add products to a cart.
 - View the cart with a list of selected products and the total price.
+- Delete items from cart
 
 ## Code Structure
 
